@@ -1,0 +1,93 @@
+:root {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #1f2933;
+  background: linear-gradient(180deg, #f7fafc 0%, #edf2f7 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.app-shell {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px 16px 48px;
+}
+
+.panel {
+  background: #ffffff;
+  border: 1px solid #d9e2ec;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 16px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+h1,
+h2 {
+  margin-top: 0;
+}
+
+.friend-form {
+  display: grid;
+  gap: 12px;
+}
+
+.friend-form input,
+.friend-form button,
+.expense-form input,
+.expense-form select,
+.expense-form button {
+  font: inherit;
+}
+
+.friend-form input,
+.expense-form input,
+.expense-form select {
+  padding: 10px 12px;
+  border: 1px solid #bcccdc;
+  border-radius: 8px;
+}
+
+.friend-form button {
+  width: fit-content;
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 8px;
+  background: #2b6cb0;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.friend-list {
+  margin: 16px 0 0;
+  padding-left: 20px;
+}
+
+.balance-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.expense-form {
+  display: grid;
+  gap: 12px;
+}
+
+.participants-group {
+  margin: 0;
+  padding: 12px;
+  border: 1px solid #d9e2ec;
+  border-radius: 8px;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
