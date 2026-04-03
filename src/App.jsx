@@ -1,29 +1,6 @@
 import { useState } from 'react'
+import { calculateBalances, formatCurrency } from './lib/expenseUtils'
 import './styles.css'
-
-function formatCurrency(amount) {
-  return `$${amount.toFixed(2)}`
-}
-
-function calculateBalances(friends, expenses) {
-  const balances = Object.fromEntries(friends.map((friend) => [friend, 0]))
-
-  expenses.forEach((expense) => {
-    const amount = Number(expense.amount)
-    const share = amount / expense.participants.length
-
-    balances[expense.payer] += amount
-
-    expense.participants.forEach((participant) => {
-      balances[participant] -= share
-    })
-  })
-
-  return friends.map((friend) => ({
-    friend,
-    amount: balances[friend]
-  }))
-}
 
 export default function App() {
   const [friendName, setFriendName] = useState('')
@@ -73,6 +50,9 @@ export default function App() {
         participants
       }
     ])
+    setExpenseAmount('')
+    setPayer('')
+    setParticipants([])
   }
 
   return (
